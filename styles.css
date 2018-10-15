@@ -1,192 +1,204 @@
-.portfolio-header {
-  position: relative;
-  background-image: url(images/header-bg.jpg);
-}
 
-.portfolio-header .mdl-layout__header-row {
-  padding: 0;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.mdl-layout__title {
-  font-size: 14px;
-  text-align: center;
-  font-weight: 300;
+html, body {
   font-family: 'Raleway', sans-serif;
-
 }
-
-.is-compact .mdl-layout__title span {
-  display: none;
+.inline-spacer {
+  padding-left: 20px;
+  margin-left: 10px;
 }
-
-.portfolio-logo-row {
-  min-height: 200px;
+.clau-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
 }
-
-.is-compact .portfolio-logo-row {
-  min-height: auto;
+.clau-layout .mdl-layout__header .mdl-layout__drawer-button {
+  color: rgba(0, 0, 0, 0.54);
 }
-.portfolio-logo {
-  background: url(images/logo.png) 50% no-repeat;
-  background-size: cover;
-  height: 150px;
-  width: 150px;
-  margin: auto auto 10px;
+.mdl-layout__drawer .avatar {
+  margin-bottom: 16px;
 }
-
-.is-compact .portfolio-logo {
-  height: 50px;
-  width: 50px;
-  margin-top: 7px;
+.clau-drawer {
+  border: none;
 }
-
-.portfolio-navigation-row {
-  background-color: rgba(0, 0, 0, 0.08);
-  text-transform: uppercase;
-  height: 45px;
+/* iOS Safari specific workaround */
+.clau-drawer .mdl-menu__container {
+  z-index: -1;
 }
-
-.portfolio-navigation-row  .mdl-navigation {
-  text-align: center;
-  max-width: 900px;
-  width: 100%;
+.clau-drawer .clau-navigation {
+  z-index: -2;
 }
-
-.portfolio-navigation-row .mdl-navigation__link {
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  line-height: 42px;
+/* END iOS Safari specific workaround */
+.clau-drawer .mdl-menu .mdl-menu__item {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-
-.portfolio-header .mdl-layout__drawer-button {
-    background-color: rgba(197, 197, 197, 0.44);
-}
-
-.portfolio-navigation-row .is-active {
-  position: relative;
-  font-weight: bold;
-}
-
-.portfolio-navigation-row .is-active:after {
-  content: "";
-  width: 70%;
-  height: 2px;
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: rgb(255,64,129);
-  left: 15%;
-}
-
-.portfolio-card .mdl-card__title {
-  padding-bottom: 0;
-}
-
-.icon {
-  font-size: 3em;
-  padding-right: 5%;
-  padding-top: 5%;
-  padding-left: 5%;
-  margin-left: 10%; 
-  display: inline-flex;
-}
-.portfolio-blog-card-full-bg {
-  background: url(images/example-blog03.jpg) center / cover;
-}
-
-.portfolio-blog-card-event-bg {
-  background: url(images/example-blog05.jpg) center / cover;
-}
-
-.portfolio-blog-card-strip-bg {
-  background: url(images/example-blog06.jpg) center / cover;
-}
-
-.portfolio-blog-card-compact .mdl-card__title {
-  padding-bottom: 0;
-}
-
-.portfolio-blog-card-bg > .mdl-card__actions {
-  height: 52px;
+.clau-drawer-header {
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   padding: 16px;
-  background: rgba(0, 0, 0, 0.2);
+  height: 151px;
 }
-
-img.article-image {
+.clau-avatar-dropdown {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
-  height: auto;
 }
 
-.portfolio-max-width {
-  max-width: 900px;
-  margin: auto;
+.clau-navigation {
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.clau-layout .clau-navigation .mdl-navigation__link {
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgba(255, 255, 255, 0.56);
+  font-weight: 500;
+}
+.clau-layout .clau-navigation .mdl-navigation__link:hover {
+  background-color: #00BCD4;
+  color: #37474F;
+}
+.clau-navigation .mdl-navigation__link .material-icons {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.56);
+  margin-right: 32px;
 }
 
-.portfolio-copy {
-  max-width: 700px;
+.clau-content {
+  max-width: 1080px;
 }
 
-.no-padding {
+.clau-charts {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.clau-chart:nth-child(1) {
+  color: #ACEC00;
+}
+.clau-chart:nth-child(2) {
+  color: #00BBD6;
+}
+.clau-chart:nth-child(3) {
+  color: #BA65C9;
+}
+.clau-chart:nth-child(4) {
+  color: #EF3C79;
+}
+.clau-graphs {
+  padding: 16px 32px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+/* TODO: Find a proper solution to have the graphs
+ * not float around outside their container in IE10/11.
+ * Using a browserhacks.com solution for now.
+ */
+_:-ms-input-placeholder, :root .clau-graphs {
+  min-height: 664px;
+}
+_:-ms-input-placeholder, :root .clau-graph {
+  max-height: 300px;
+}
+/* TODO end */
+.clau-graph:nth-child(1) {
+  color: #00b9d8;
+}
+.clau-graph:nth-child(2) {
+  color: #d9006e;
+}
+
+.clau-cards {
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+}
+.clau-cards .clau-separator {
+  height: 32px;
+}
+.clau-cards .mdl-card__title.mdl-card__title {
+  color: white;
+  font-size: 24px;
+  font-weight: 400;
+}
+.clau-cards ul {
   padding: 0;
 }
-
-.no-left-padding{
-  padding-left: 0;
+.clau-cards h3 {
+  font-size: 1em;
+}
+.clau-updates .mdl-card__title {
+  min-height: 200px;
+  background-image: url('images/dog.png');
+  background-position: 90% 100%;
+  background-repeat: no-repeat;
+}
+.clau-cards .mdl-card__actions a {
+  color: #00BCD4;
+  text-decoration: none;
 }
 
-.no-bottom-padding {
-  padding-bottom: 0;
+.clau-options h3 {
+  margin: 0;
 }
-
-.padding-top {
-  padding: 10px 0 0;
+.clau-options .mdl-checkbox__box-outline {
+  border-color: rgba(255, 255, 255, 0.89);
 }
-
-.portfolio-share-btn {
-  position: relative;
-  float: right;
-  top: -4px;
+.clau-options ul {
+  margin: 0;
+  list-style-type: none;
 }
-
-.demo-card-event > .mdl-card__actions {
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    box-sizing: border-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+.clau-options li {
+  margin: 4px 0;
 }
-
-.portfolio-contact .mdl-textfield {
-  width: 100%;
+.clau-options .material-icons {
+  color: rgba(255, 255, 255, 0.89);
 }
-
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Raleway', sans-serif;
+.clau-options .mdl-card__actions {
+  height: 64px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-
-body {
-  font-family: 'Open Sans', sans-serif;
-}
-
-footer {
-  background-size: cover;
-}
-
-.contact-list-icon {
-  width: 500px;
-}
-
-@media screen and (max-width: 1024px) {
- header#portfolio-header {
-   display: flex;
- }
-}
- 
- 
